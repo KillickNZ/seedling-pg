@@ -1,21 +1,21 @@
 .navigation {
-
     height: 5rem;
-    border-bottom: 1px solid black;
     width: 100vw;
 }
 
 .navigation__section {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar_brand {
-
+    margin: 0 0 0 5rem;
 }
 
 .nav_menu {
     list-style-type: none;
-    margin: 0;
+    margin: 0 5rem 0 0;
     padding: 0;
     overflow: hidden;
 }
@@ -31,4 +31,16 @@
     padding: 14px 16px;
     text-decoration: none;
 
+}
+
+.header_border__bottom {
+    position: relative;
+    top: -1vh;
+    width: 100vw;
+
+    border-bottom: 2vh solid transparent;
+    -moz-border-image: -moz-linear-gradient(top, #08AEEA 0%, #2AF598 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #08AEEA 0%, #2AF598 100%);
+    border-image: linear-gradient(to right, #08AEEA 0%, #2AF598 100%);
+    border-image-slice: 1;
 }

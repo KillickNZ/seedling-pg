@@ -1,12 +1,12 @@
 import React from 'react'
-import Image from 'next/image'
 import { connect } from 'react-redux'
 import headerStyles from './header.module.scss'
 
 function HeaderLoggedIn(props) {
     
     return (
-        <nav>
+        <>
+    <nav>
         <div className={headerStyles.navigation} >
             <div className={headerStyles.navigation__section} >
                 <a href="/portfolio" className={headerStyles.navbar_brand}>
@@ -29,6 +29,8 @@ function HeaderLoggedIn(props) {
                 </div>
             </div>
     </nav>
+    <div className={headerStyles.header_border__bottom}></div>
+    </>
     )
 }
 

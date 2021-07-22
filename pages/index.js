@@ -3,7 +3,7 @@ import Image from 'next/image'
 import HeaderLoggedIn from '../src/components/headerLoggedIn'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+function Home(props) {
   return (
     <div className={styles.container}>
       <Head>
@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {}
+      {/* TODO - if logged in, render logged in header if not render header */}
       <HeaderLoggedIn />
 
       <main className={styles.main}>
@@ -71,3 +71,11 @@ export default function Home() {
     </div>
   )
 }
+
+const mapStateToProps = (state) => {
+  return {
+      user: state.user
+  }
+}
+
+export default Home 
